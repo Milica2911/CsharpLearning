@@ -1,0 +1,130 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ProgrammingBasics
+{
+    public class NumberOperations
+    {
+        public static int Sum(int a, int b)
+        {
+            return a + b;
+        }
+
+        public static bool PositiveOrNegative(int c)
+        {
+            return c >= 0;
+        }
+
+        public static bool DivisionWithFive(int d)
+        {
+            return d % 5 == 0;
+        }
+
+        public static string EvenOrOdd(int e)
+        {
+            if (e % 2 == 0)
+                return "even";
+            else
+                return "odd";
+        }
+
+        public static int DivisionWithRemainder(int a, int b)
+        {
+            return a % b;
+        }
+
+        public class Paper
+        {
+            public float width, length;
+            public Paper(float width, float length)
+            {
+                this.width = width;
+                this.length = length;
+            }
+
+            public void PrintDimensions()
+            {
+                Console.WriteLine("Dimensions of one sheet of A4 (210×297 mm) paper expressed in inches are {0} x {1}", width, length);
+            }
+        }
+
+        public static Paper A4PaperToInches()
+        {
+            float a = 210 / 25.4f;
+            float b = 297 / 25.4f;
+
+            return new Paper(a, b);
+        }
+
+        public static float CelsiusToFahrenheit(float c)
+        {
+            float f = 9 * c / 5 + 32;
+            return f;
+        }
+
+        public static void StarTriangle(int starNumber)
+        {
+            for (int i = 1; i <= starNumber; i++)
+            {
+                string stars = new String('*', i);
+                Console.WriteLine(stars);
+            }
+        }
+
+        public static void AllLessThen(int num)
+        {
+            int sum = 0;
+            for (int i = 0; i <= num; i++)
+            {
+                Console.WriteLine("{0} ", i);
+                sum += i;
+            }
+            Console.WriteLine("Their sum is {0}", sum);
+        }
+
+        public static void AllLessThen()
+        {
+            int sum = 0;
+            for (int i = 0; i <= 5; i++)
+            {
+                Console.WriteLine("{0} ", i);
+                sum += i;
+            }
+            Console.WriteLine("Their sum is {0}", sum);
+        }
+
+        public static int NumbersComparison(int a, int b, int c)
+        {
+            if (a > b)
+            {
+                if (a > c)
+                    return a;
+                else
+                    return c;
+            }
+            else
+            {
+                if (b > c)
+                    return b;
+                else
+                    return c;
+            }
+        }
+
+        public static void ValuesSwapping(ref int a, ref int b)
+        {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
+
+
+      
+
+
+    }
+}
