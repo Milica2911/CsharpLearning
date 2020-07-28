@@ -122,17 +122,6 @@ namespace ProgrammingBasics
             }
         }
 
-        public static void AllLessThen()
-        {
-            int sum = 0;
-            for (int i = 0; i <= 5; i++)
-            {
-                Console.WriteLine("{0} ", i);
-                sum += i;
-            }
-            Console.WriteLine("Their sum is {0}", sum);
-        }
-
         public static int NumbersComparison(int a, int b, int c)
         {
             if (a > b)

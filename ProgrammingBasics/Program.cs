@@ -129,7 +129,7 @@ namespace ProgrammingBasics
 
                     case 15:
                         Console.WriteLine("First 5 natural numbers and their sum is: ");
-                        NumberOperations.AllLessThen();
+                        NumberOperations.AllLessThen(5);
                         break;
 
                     case 16:
@@ -199,6 +199,11 @@ namespace ProgrammingBasics
                 if (response != "y")
                     break;
             }
+        }
+
+        private static void NewMethod()
+        {
+            NumberOperations.AllLessThen();
         }
     }
 }
