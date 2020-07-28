@@ -85,6 +85,43 @@ namespace ProgrammingBasics
             Console.WriteLine("Their sum is {0}", sum);
         }
 
+        public static void EnteredNumber(int num)
+        {
+            switch (num)
+            {
+                case 0:
+                    Console.WriteLine("User entered number 0");
+                    break;
+                case 1:
+                    Console.WriteLine("User entered number 1");
+                    break;
+                case 2:
+                    Console.WriteLine("User entered number 2");
+                    break;
+                case 3:
+                    Console.WriteLine("User entered number 3");
+                    break;
+                case 4:
+                    Console.WriteLine("User entered number 4");
+                    break;
+                case 5:
+                    Console.WriteLine("User entered number 5");
+                    break;
+                case 6:
+                    Console.WriteLine("User entered number 6");
+                    break;
+                case 7:
+                    Console.WriteLine("User entered number 7");
+                    break;
+                case 8:
+                    Console.WriteLine("User entered number 8");
+                    break;
+                case 9:
+                    Console.WriteLine("User entered number 9");
+                    break;
+            }
+        }
+
         public static void AllLessThen()
         {
             int sum = 0;

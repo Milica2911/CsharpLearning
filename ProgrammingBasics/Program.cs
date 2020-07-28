@@ -133,7 +133,9 @@ namespace ProgrammingBasics
                         break;
 
                     case 16:
-                        Console.WriteLine("I don't understand the task.");
+                        Console.WriteLine("Please enter one number:");
+                        var randomNum = Convert.ToInt32(Console.ReadLine());
+                        NumberOperations.EnteredNumber(randomNum);
                         break;
 
                     case 17:
