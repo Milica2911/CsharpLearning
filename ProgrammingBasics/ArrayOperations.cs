@@ -23,6 +23,12 @@ namespace ProgrammingBasics
             return arr;
         }
 
+        public static int SecondBiggestArrayNumber(int[] arr)
+        {
+            ArrayOperations.SortingFromSmallestToLargest(arr);
+            return arr[arr.Length - 2];
+        }
+
         public static string ArrayToString(int[] arr)
         {
             string ArrString = arr[0].ToString();

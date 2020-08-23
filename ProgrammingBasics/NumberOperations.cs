@@ -147,10 +147,23 @@ namespace ProgrammingBasics
             b = temp;
         }
 
-
-
-      
-
+        public static void PyramideOfNumbers(int numRows)
+        {
+            var numSpaces = numRows;
+            // petlja za broj razmaka
+            for (int i = 1; i <= numRows; i++)
+            {
+                numSpaces--;
+                string pyramide = new string(' ', 2 * numSpaces);
+           
+                // petlja za ispis brojeva unutar svakog reda
+                for (var j = 1; j <= 2 * i - 1; j++)
+                {
+                    pyramide += j + " ";
+                }
+                Console.WriteLine(pyramide);
+            }
+        }
 
     }
 }

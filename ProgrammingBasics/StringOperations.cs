@@ -57,7 +57,17 @@ namespace ProgrammingBasics
             return resString;
         }
 
+        public static string ReverseWordOrder(string sentence)
+        {
+            var words = sentence.Split(' ');
+            string reversedSentence = words[words.Length - 1];
+            for (var i = words.Length - 2; i >= 0; i--)
+            {
+                reversedSentence += ' ' + words[i];
+            }
+            return reversedSentence;
 
-
+        }
+        
     }
 }

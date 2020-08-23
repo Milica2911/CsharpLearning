@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace ProgrammingBasics
 {    class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("1) Napisati program koji prihvata unos dva broja I vraca njihov zbir. \n" +
+            Console.WriteLine("Basic Level: \n" +
+                "1) Napisati program koji prihvata unos dva broja I vraca njihov zbir. \n" +
                 "2) Napisati program koji uzima broj kao argument I vraca true ako je broj jednak ili veci od nule. U suprotnom vraca false. \n" +
                 "3) Napisati program koji proverava I vraca true ako je ceo broj deljiv sa 5.U suprotnom, vraca false. \n" +
-                "4) Napisati program koji uzima kao argumente 2 stringa, ime i prezime, spaja ih(Concatenate) I vracanovi string u formatu “prezime, ime” \n" +
+                "4) Napisati program koji uzima kao argumente 2 stringa, ime i prezime, spaja ih(Concatenate) I vraca novi string u formatu “prezime, ime” \n" +
                 "5) Napisati program uzima broj kao argument I vraca “paran” ili “neparan” u zavisnosti od tipa \n" +
                 "6) Napisati program koji vraca poslednji element iz liste. \n" +
                 "7) Napraviti konzolnu aplikaciju koja ucitava 2 stringa i proverava da li su stringovi jednaki. \n" +
@@ -28,7 +30,16 @@ namespace ProgrammingBasics
                 "20) Napisati program koji proverava koliko se puta broj 5 pojavljuje u sledecem nizu 1, 6, 2, 5, 8, 5, 20, 12, 90, 5.8. \n" +
                 "21) Ako imamo dva broja broja, x = 5, y = 10, napisati program koji ce odaditi swap(broju x dodeliti vrednost broja y i obrnuto). \n" +
                 "22) Napraviti program koji od postojeceg stringa 'Good morning! Today is Monday.' pravi novi string tako sto ce sve praznine(whitespaces) zameniti sa dodnjom crtom. \n" +
-                "23) Napisati program koji ce od unetog stringa napraviti novi string, tako sto ce prvi i poslednji karakter zameniti mesta. \n");
+                "23) Napisati program koji ce od unetog stringa napraviti novi string, tako sto ce prvi i poslednji karakter zameniti mesta. \n" +
+                "Intermediate Level: \n" +
+                "24) Napisati program koji će promeniti redosled reči u rečenici. \n" +
+                "25) Napisati program koji će da ispisuje koliko svako od slova pojavljuje u stringu. \n" +
+                "26) Napisati program koji iz stringa izbacuje karaktere koji se ponavljaju. \n" +
+                "27) Pronaći drugi najveći broj u datom nizu. \n" +
+                "28) Napraviti klasu 'MathOperations' koja će imati jedan metod 'Square' koji  za argument prima broj tipa integer i vraća kvadrat tog broja. Napisati drugu klasu 'DataProcessing' koja nasleđuje klasu 'MathOperations'. Klasa DataProcessing treba da sadrži metod 'Processing' koji isčitava podatke iz Excel fajla DataInput koji sadrži brojevi u prvoj koloni i potom poziva metod 'square' za svaki od učitanih brojeva i ispisuje rezultat u novo kreirani Excel fajl DataResult. Excel fajlovi treba da se nalaze na lokaciji src/Data. \n" +
+                "29) Napisati program koji ispisuje piramidu u vidu brojeva. Npr za uneti broj 5 ispis izgleda ovako: \n" +
+                "30) Koristeći LINQ napisati program koji ispisuje elemente niza prvo po dužini svakog elementa a zatim po imenu (u rastućem obliku). \n"
+                );
 
             while (true)
             {
@@ -189,6 +200,46 @@ namespace ProgrammingBasics
                         Console.WriteLine("First and last character are swapped: {0}", StringOperations.SwappingFirstAndLastChar(randomString));
                         break;
 
+                    case 24:
+                        Console.WriteLine("Please enter any sentence:");
+                        var wordOrder = Console.ReadLine();
+                        Console.WriteLine("Reversed sentence: {0}", StringOperations.ReverseWordOrder(wordOrder));
+                        break;
+
+                    case 25: 
+                        Console.WriteLine("Please enter any word or two:");
+                        var wordOrTwo = Console.ReadLine();
+                        Console.WriteLine("All different letters and how many times they appear: ");
+                        ListOperations.LettersRepetition(wordOrTwo);
+                        break;
+
+                    case 26:
+                        Console.WriteLine("Please enter any text (one or more words): ");
+                        var wordOrSentence = Console.ReadLine();
+                        Console.WriteLine("That same text without duplicated letters: {0}", ListOperations.ExludeDuplicatedLetters(wordOrSentence));
+                        break;
+
+                    case 27:
+                        int[] arr3 = new int[] { 6, 40, 1, 95, 7, 56, 8, 37, 2 };
+                        Console.WriteLine("Program will find second biggest number in array: {0}", ArrayOperations.ArrayToString(arr3));
+                        Console.WriteLine("That number is {0}.", ArrayOperations.SecondBiggestArrayNumber(arr3));
+                        break;
+
+                    case 28:  // Excel - jedino preostalo (nezavrseno)
+                        Console.WriteLine("This task is not yet completed. Choose another one.");
+                        break;
+
+                    case 29:
+                        Console.WriteLine("Please enter one number to make pyramide of numbers:");
+                        var pyramide = Convert.ToInt32(Console.ReadLine());
+                        NumberOperations.PyramideOfNumbers(pyramide);
+                        break;
+
+                    case 30:
+                        string[] capitalCity = new string[] { "Rome", "London", "Nairobi", "California", "Zurich", "New Delhi", "Amsterdam", "Abu Dhabi", "Paris" };
+                        LINQtask.SortCapitals(capitalCity);
+                        break;
+
                     default:
                         Console.WriteLine("That task doesn't exist.");
                         break;
@@ -202,3 +253,4 @@ namespace ProgrammingBasics
         }
     }
 }
+
